@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/color_background">
+
+    <ImageView
+        android:id="@+id/imageSlide"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/container_onboarding_pic"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/imageSlideIconAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/container_onboarding_pic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_colorFilter="@color/color_progress_bar"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/currencies"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Title Text"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/letter_large"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imageSlide"
+        android:fontFamily="@font/opensans_bold"/>
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_small"
+        android:layout_marginEnd="@dimen/layout_small"
+        android:gravity="center"
+        android:text="Description Text"
+        android:textSize="@dimen/letter_regular"
+        app:layout_constraintTop_toBottomOf="@id/textTitle"
+        android:fontFamily="@font/opensans_regular"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

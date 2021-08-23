@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+
+    <!-- Currencies -->
+    <string name="eur">EUR</string>
+    <string name="usd">USD</string>
+    <string name="amount">Amount</string>
+    <string name="_1_eur">1 EUR = </string>
+    <string name="offline">Offline</string>
+    <string name="no_data">Sorry, You are offline. We do not have any data to show You.</string>
+    <string name="cant_update_currency">Sorry, You are offline. We cannot change primary currency, try again later.</string>
+    <string name="next">Next</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="actionMenuTextColor">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>Ø
+        <item name="actionMenuTextColor">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="InputText" parent="InputTextNoMargin">
+        <item name="android:layout_marginEnd">@dimen/layout_medium</item>
+        <item name="android:layout_marginStart">@dimen/layout_medium</item>
+    </style>
+
+    <style name="InputTextNoMargin" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textSize">@dimen/letter_small</item>
+        <item name="boxStrokeColor">@color/color_outline</item>
+        <item name="hintTextAppearance">@style/Hint</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:radius">@dimen/layout_small</item>
+        <item name="boxCornerRadiusTopStart">@dimen/layout_small</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/layout_small</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/layout_small</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/layout_small</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+    <style name="Hint" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/color_text</item>
+        <item name="android:textSize">@dimen/letter_small</item>
+        <item name="android:fontFamily">@font/opensans_bold</item>
+    </style>
+</resources>

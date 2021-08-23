@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context=".view.MainFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/color_progress_bar"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/progress_bar" />
+
+    <TextView
+        android:id="@+id/noDataToShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/layout_medium"
+        android:layout_marginTop="@dimen/layout_large"
+        android:layout_marginEnd="@dimen/layout_medium"
+        android:fontFamily="@font/opensans_regular"
+        android:text="@string/no_data"
+        android:textAlignment="center"
+        android:textSize="@dimen/letter_regular"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/firstCurName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_medium"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:textSize="@dimen/letter_regular"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/firstInpLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="USD" />
+
+            <TextView
+                android:id="@+id/firstCurrRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_medium"
+                android:layout_marginTop="@dimen/layout_extra_small"
+                android:fontFamily="@font/opensans_regular"
+                android:textSize="@dimen/letter_regular"
+                android:textColor="@color/color_progress_bar"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstInpLayout"
+                tools:text="1 USD = 1.111 EUR" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstInpLayout"
+                style="@style/InputText"
+                android:layout_width="@dimen/container_input_width"
+                android:layout_height="@dimen/container_input_height"
+                android:layout_marginEnd="@dimen/layout_medium"
+                android:hint="@string/amount"
+                app:layout_constraintBottom_toBottomOf="@+id/firstCurName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/firstCurName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/firstInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/opensans_regular"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:padding="@dimen/layout_none"
+                    android:text="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/secondCurrName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_large"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:textSize="@dimen/letter_regular"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/secondInpLayout"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstCurrRate"
+                tools:text="EUR" />
+
+            <TextView
+                android:id="@+id/secondCurrRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_medium"
+                android:layout_marginTop="@dimen/layout_extra_small"
+                android:layout_marginBottom="@dimen/layout_medium"
+                android:fontFamily="@font/opensans_regular"
+                android:textSize="@dimen/letter_regular"
+                android:textColor="@color/color_progress_bar"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondInpLayout"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="1 EUR = 0.85471 USD" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/secondInpLayout"
+                style="@style/InputText"
+                android:layout_width="@dimen/container_input_width"
+                android:layout_height="@dimen/container_input_height"
+                android:layout_marginEnd="@dimen/layout_medium"
+                android:hint="@string/amount"
+                app:layout_constraintBottom_toBottomOf="@+id/secondCurrName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/secondCurrName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/secondInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/opensans_regular"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
+                    android:padding="@dimen/layout_none"
+                    android:text="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/offline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_small"
+                android:layout_marginTop="@dimen/layout_small"
+                android:layout_marginBottom="@dimen/layout_small"
+                android:fontFamily="@font/opensans_regular"
+                android:text="@string/offline"
+                android:textColor="@color/color_warning"
+                android:textSize="@dimen/letter_small"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondCurrRate"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/lastUpdated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/opensans_regular"
+                android:textSize="@dimen/letter_small"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/offline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintStart_toEndOf="@+id/offline"
+                app:layout_constraintTop_toTopOf="@+id/offline"
+                tools:text="Last Updated: "
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/color_progress_bar"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/currencyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</LinearLayout>

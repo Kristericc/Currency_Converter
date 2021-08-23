@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:override="true">
+    <!-- Layout Margins -->
+    <dimen name="layout_none">0dp</dimen>
+    <dimen name="layout_extra_small">5dp</dimen>
+    <dimen name="layout_small">10dp</dimen>
+    <dimen name="layout_medium">20dp</dimen>
+    <dimen name="layout_large">30dp</dimen>
+
+    <!-- Letter Sizes -->
+    <dimen name="letter_large">24sp</dimen>
+    <dimen name="letter_regular">18sp</dimen>
+    <dimen name="letter_small">12sp</dimen>
+
+    <!-- Container Sizes -->
+    <dimen name="container_card">60dp</dimen>
+    <dimen name="container_input_width">150dp</dimen>
+    <dimen name="container_input_height">50dp</dimen>
+    <dimen name="container_constraint_layout">100dp</dimen>
+    <dimen name="container_onboarding_pic">300dp</dimen>
+
+    <!-- Indicator -->
+    <dimen name="indicator_height">50dp</dimen>
+
+</resources>
